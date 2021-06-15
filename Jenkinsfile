@@ -1,6 +1,7 @@
 pipeline{
-	agent any
-	tools {nodejs "NodeJS"}
+	agent {
+        	docker { image 'node:latest' }
+    	}	
 	stages{
 		stage('Test'){
 			steps{
